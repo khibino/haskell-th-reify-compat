@@ -1,10 +1,13 @@
 module Language.Haskell.TH.Compat.Reify.V210 (
+  ParentName,
   unClassOpI, unDataConI, unVarI,
   reifyFixity,
   )where
 
-import Language.Haskell.TH (Info (..), Name, Type, ParentName, Dec, Fixity)
+import Language.Haskell.TH (Info (..), Name, Type, Dec, Fixity)
 
+-- | ParentName type alias is not defined before template-haskell-2.8
+type ParentName = Name
 
 -- | Compatible interface to destruct 'ClassOpI'
 unClassOpI :: Info -> Maybe (Name, Type, ParentName)

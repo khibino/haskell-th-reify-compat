@@ -1,4 +1,5 @@
 module Language.Haskell.TH.Compat.Reify.Current (
+  ParentName,
   unClassOpI, unDataConI, unVarI,
   reifyFixity,
   )where

@@ -17,6 +17,9 @@ module Language.Haskell.TH.Compat.Reify (
 
   -- * Interface to get operator fixity
   reifyFixity,
+
+  -- * Interface of type alias name
+  ParentName,
   ) where
 
 #if MIN_VERSION_template_haskell(2,11,0)

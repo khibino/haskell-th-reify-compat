@@ -21,13 +21,9 @@ tested-with:           GHC == 8.4.1, GHC == 8.4.2
                      , GHC == 7.6.1, GHC == 7.6.2, GHC == 7.6.3
                      , GHC == 7.4.1, GHC == 7.4.2
 
-flag template-haskell-210
-  description: If true, use template-haskell 2.10 or older, otherwise use template-haskell 2.11 or newer.
-  default:     False
-
 library
   exposed-modules:      Language.Haskell.TH.Compat.Reify
-  if flag(template-haskell-210)
+  if impl(ghc < 8)
     other-modules:
                           Language.Haskell.TH.Compat.Reify.V210
     build-depends:        template-haskell <2.11
